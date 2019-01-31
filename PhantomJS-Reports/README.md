@@ -1,4 +1,4 @@
-#Reports using Surefire Reports
+# Reports using Surefire Reports
 For when we connect surefire reports into Jenkins, we want to use a headless browser. 
 
 This way it eliminates the need to open up a GUI browser which needs to be interacted with - this way we can set up jenkins on a CLI server and have it run our tests
@@ -16,3 +16,10 @@ This produces the main information for templates for the reports as well as the 
 This generates the surefire report
 
 The report can be read at target/site/surefire-report.html
+
+
+## If using with jenkins
+
+Apply the following command at the end to have jenkins build fail if any tests come back as failed.
+
+`mvn install`
